@@ -14,7 +14,7 @@ html{
   scroll-behavior: smooth;
 }
 body {
-  max-width: 1200px;
+  max-width: 1920px;
   margin: 0 auto;
   background-color: rgb(150, 131, 131);
 }
@@ -30,14 +30,33 @@ a {
   text-decoration: none;
 }
 
+  @media screen and (min-width:1760px) and (max-width:1920px) {
+  body{
+    font-size: 16px;
+  }
+} 
+
+@media screen and (min-width:1445px) and (max-width:1759px) {
+  body{
+    font-size: 14px;
+  }
+} 
+
+@media screen and (min-width:360px) and (max-width:1444px) {
+  body{
+    font-size: 12px;
+  }
+} 
+ 
+
 /*------------------------- Header------------------------------*/
 
 header {
   background-color: var(--main-color);
-  height: 70px;
+  height: 105px;
   position: fixed;
   z-index: 2;
-  max-width: 1200px;
+  max-width: 1920px;
   width: 100%;
 }
 
@@ -52,26 +71,27 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin: .3em 12em 0em 10em;
+  margin: .3em 18em 0em 16em;
   height: 100%;
 }
 
 .item-navbar-header {
   height: 100%;
   list-style: none;
+  margin-top: 5em;
 }
 
 .item-navbar-header > a {
-  color: #7B616E;
+  color: #8b8387;
   height: 100%;
-  font-size: .85em;
-  font-weight: 400;
-  display: flex;
-  align-items: center;
+  font-size: 1.39em;
+  font-weight: 500;
+  padding: 1.4em 0em;
+  text-align: center;
 }
 
-.active {
-  border-bottom: 3px solid var(--second-color);
+.active > a {
+  border-bottom: 4px solid var(--second-color);
 }
 
 .active > a {
@@ -179,49 +199,77 @@ header {
   }
 }
 
+ @media screen and (max-width:1583px) {
+
+  .list-navbar-header {
+    margin: .3em 13em 0em 13em;
+  }
+} 
+
+@media screen and (max-width:1300px) {
+
+  .list-navbar-header {
+    margin: .3em 8em 0em 8em;
+  }
+} 
+
+@media screen and (max-width:1042px) {
+
+  .list-navbar-header {
+    margin: .3em 7em 0em 7em;
+  }
+}
+
 /*------------------------- Main section------------------------------*/
 
 .main-section {
-  padding-top: 4.3em;
+  padding-top: 3.2em;
   display: flex;
   overflow: hidden;
   color: #717171;
   background-color: #fff;
+  position: relative;
 }
 
 .info-main-section {
-  max-width: 500px;
-  margin: 3em 0 4em 8em;
-}
-
-.title-info-main {
-  font-weight: 100;
-  font-size: 2em;
-}
-
-.body-info-main {
-  margin-top: .8em;
-  font-size: .8em;
+  margin: 8em 0 8em 12.1em;
+  width: 43%;
 }
 
 .info-main-content {
-  margin-top: 2em;
+  margin-top: 2.8em;
+  max-width: 880px;
+
+}
+
+.title-info-main {
+  font-weight: 300;
+  font-size: 3.2em;
+  line-height: 1.2em;
+}
+
+.body-info-main {
+  margin-top: 1em;
+  max-width: 760px;
+  font-size: 1.23em;
 }
 
 .email-section {
   display: flex;
-  gap: 1.4em;
-  margin-top: 2em;
+  gap: 2em;
+  margin-top: 3.5em;
 }
 
 #input-email-main {
   border: none;
   background-color: #EAEAEA;
-  width: 250px;
+  width: 385px;
   color: #B2B2B2;
-  padding: .6em 1em;
+  padding: .7em 1em;
   border-radius: 50px;
   outline: none;
+  font-size: 1.4em;
+  font-weight: 500;
 }
 
 #input-email-main::placeholder {
@@ -229,13 +277,15 @@ header {
 }
 
 .btn-main {
+  display: flex;
+  justify-content: center;
   border: none;
   font-weight: 600;
-  font-size: 1em;
+  font-size: 1.6em;
   background-color: var(--second-color);
   color: #fff;
-  padding: .6em 1.8em;
-  width: 165px;
+  padding: .7em 1.8em;
+  width: 266px;
   border-radius: 50px;
   cursor: pointer;
 }
@@ -244,13 +294,14 @@ header {
   background-color: rgba(0, 158, 255, .9);
 }
 
-.img-main {
-  background: grey;
+ .img-main {
   background: url("./DESKTOP/ASSETS/Grupo\ 932.png") no-repeat;
-  background-size: 925px 775px;
-  background-position: -48px;
   width: 100%;
-}
+  background-position: -75px -150px; 
+  height: 900px;
+  position: absolute;
+  right: -944px
+} 
 
 @media screen and (min-width: 360px) and (max-width:890px) {
 
@@ -327,65 +378,70 @@ header {
   }
 }
 
+ @media screen and (max-width:1500px) and (min-width:1300px) {
+
+  .info-main-section {
+    margin: 3em 0 4em 15em;
+    max-width: 800px;
+    width: 37%;
+  }
+
+  .img-main{
+    background-size: contain;
+    background-position: -100px -100px;
+  }
+} 
 /*------------------------- About section------------------------------*/
 
 .about-section {
   background-color: var(--background2);
-  padding: 4em 0em 5.3em 0em;
+  padding: 6em 0em 9em 0em;
   display: flex;
   flex-direction: column;
-  gap: 5em;
-}
-
-.who-are-section, .how-we-do-section {
-  display: grid;
-  margin: 0em 12em 0em 17em;
-  grid-template-columns: repeat(auto-fill, 355px);
+  gap: 8em;
+  flex-wrap: wrap;
 }
 
 .who-are-section {
-  text-align: start;
+  display: flex;
+  margin: 0em 15em 0em 26.5em;
+  gap: 7.5em;
+
 }
 
-.how-we-do-section {
-  flex-direction: row-reverse;
+.how-we-do-section{
+  display: flex;
+  margin: 0em 21.5em 0em 20.6em;
   text-align: end;
-}
+  gap: 1em;
+
+
+} 
 
 .who-are-content, .how-we-do-content {
   color: #373735;
-  max-width: 500px;
-  margin-top: 1.5em;
+  margin-top: 2.8em;
 }
 
-.who-are-content {
-  padding-left: 4.7em;
-}
 
 .how-we-do-content {
-  padding-right: 4em;
-  margin-top: 2em;
+  padding-right: 6em;
+  margin-top: 2.5em;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
 .how-we-do-title, .who-are-title {
-  font-size: 1.8em;
+  font-size: 2.9em;
   font-weight: 600;
   color: #373735;
 }
 
 .who-are-body, .how-we-do-body {
-  font-size: .72em;
+  font-size: 1.13em;
   color: #7A7675;
   margin-top: 1.5em;
-  width: 347px;
-}
-
-.who-are-section > img, .how-we-do-section > img {
-  max-height: 230px;
-  max-width: 355px;
 }
 
 .who-are-section>img {
@@ -400,7 +456,7 @@ header {
 
 .footer-sections {
   display: flex;
-  font-size: .95em;
+  font-size: 1.51em;
   color: #A4A09F;
   line-height: 1.7em;
   text-align: left;
@@ -409,13 +465,10 @@ header {
 
 .footer-who-how {
   gap: 2em;
-  margin: 1em 8em 0em 13em;
+  margin: 1em 8em 0em 12.5em;
 }
 
-.footer-sections>img {
-  width: 42px;
-  height: 42px;
-}
+
 
 @media screen and (min-width: 360px) and (max-width:890px) {
 
@@ -499,16 +552,24 @@ header {
   }
 }
 
+@media screen and (max-width: 1618px) and (min-width:1175px)  {
+
+  .who-are-section, .how-we-do-section {
+    margin: 0em 15em 0em 15em;
+    justify-content: center;
+  }
+}
+
 /*------------------------- Use section------------------------------*/
 
 .use-section {
   background-color: var(--main-color);
   text-align: center;
-  padding: 2em 0 6em 0;
+  padding: 3.5em 0 9.5em 0;
 }
 
 .use-section > h2 {
-  font-size: var(--fonst-size-titles);
+  font-size: 2.9em;
   font-weight: 600;
   color: #08201F;
 }
@@ -516,25 +577,21 @@ header {
 .instructions {
   display: flex;
   justify-content: center;
-  line-height: 1.1em;
-  gap: 50px;
-  margin: 4em 17em 3.3em 14em;
+  line-height: 1.6em;
+  margin: 6em 27em 4.5em 23em;
+  gap: 5.5em;
 }
 
-.instruction > img {
-  width: 55px;
-  height: 55px;
-}
 
 .instruction-number {
-  font-size: 1.7em;
+  font-size: 3em;
   font-weight: 500;
-  margin: .5em 0;
+  margin: .7em 0;
   color: #08201F;
 }
 
 .instruction-body {
-  font-size: .68em;
+  font-size: 1.14em;
   color: #08201F;
 }
 
@@ -544,10 +601,7 @@ header {
   color: #93757F;
 }
 
-.footer-use > img {
-  width: 30px;
-  height: 35px;
-}
+
 
 @media screen and (min-width: 360px) and (max-width: 1030px) {
 
@@ -609,7 +663,7 @@ header {
 
 .tips-section {
   background: #fff;
-  padding: 4em 0em 6em 0em;
+  padding: 7em 0em 9.5em 0em;
 }
 
 .tips-section > h3 {
@@ -617,33 +671,35 @@ header {
   color:#313131 ;
   font-weight: 600;
   text-align: center;
-  font-size: var(--fonst-size-titles);
+  font-size: 2.9em;
 }
 
 .list-tips {
-  line-height: 1.8em;
   display: flex;
   flex-direction: column;
-  margin: 0em 6em 0em 14em;
+  gap: 1em;
+  margin: 0em 8em 0em 21em;
 }
 
 .item-tip {
   list-style: none;
-  font-size: .95em;
+  font-size: 1.55em;
+  line-height: 1.8em;
+  padding-left: .8em;
   position: relative;
 }
 
-.item-tip::before {
-  content: '';
+.item-tip::before{
+  content: "";
   position: absolute;
-  left: -30px;
-  display: inline-block;
-  top: 5px;
-  height: 20px;
-  width: 20px;
-  background: url("./DESKTOP/ASSETS/Trazado\ 649.png") no-repeat center;
-  background-size: contain;
+  background: url("./DESKTOP/ASSETS/Trazado\ 649.png") no-repeat;
+  width: 30px;
+  height: 30px;
+  left: -20px;
+  top: 10px;
 }
+
+
 
 @media screen and (min-width:360px) and (max-width: 785px) {
 
@@ -665,11 +721,11 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 2em;
-  padding: 4em 12em;
+  padding: 6em 12em;
 }
 
 .contact-section > h3 {
-  font-size: var(--fonst-size-titles);
+  font-size: 2.9em;
   font-weight: 600;
   color: #313131;
 }
@@ -677,16 +733,17 @@ header {
 .contact-text {
   color: #967B84;
   font-weight: 500;
+  font-size: 1.65em;
 }
 
 form {
   display: grid;
   position: relative;
-  gap: .7em;
+  gap: 1.2em;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 43px) 145px 1fr 1fr;
+  grid-template-rows: repeat(3, 70px) 230px 1fr 1fr;
   grid-template-areas: "name email" "phone address" "product product" "message message" "conditions conditions" "btn btn";
-  width: 700px;
+  width: 1135px;
 }
 
 #name {
@@ -743,9 +800,9 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 
 input[required]+label {
   color: #999;
-  font-size: .8em;
+  font-size: 1.6em;
   position: absolute;
-  left: 15px;
+  left: 30px;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -772,8 +829,15 @@ input[type="checkbox"]+label {
   color: #969698;
 }
 
+input[type="checkbox"]{
+  transform: scale(1.5);
+  
+}
+
 textarea {
   resize: none;
+  font-size: 1.6em;
+
 }
 
 textarea::placeholder {
@@ -782,7 +846,8 @@ textarea::placeholder {
 }
 
 #conditions-label {
-  margin-left: .6em;
+  margin-left: 1em;
+  font-size: 1.5em;
 }
 
 .conditions {
@@ -801,7 +866,7 @@ textarea::placeholder {
   background-size: contain;
   color: transparent;
   border-radius: 15px;
-  padding: .65em 1.5em;
+  padding: 2em 4.5em;
   cursor: pointer;
 }
 
